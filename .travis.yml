@@ -35,10 +35,10 @@ before_install:
     fi
   - brew update || brew update
   - if [ -f ".git/shallow" ]; then travis_retry git fetch --unshallow; fi
-  - mkdir -p $(brew --repo)/Library/Taps/denji
-  - ln -s $PWD $(brew --repo)/Library/Taps/denji/homebrew-nginx
-  - cd $(brew --repo)/Library/Taps/denji/homebrew-nginx
-  - export TRAVIS_BUILD_DIR="$(brew --repo)/Library/Taps/denji/homebrew-nginx"
+  - mkdir -p $(brew --repo)/Library/Taps/huawenyu
+  - ln -s $PWD $(brew --repo)/Library/Taps/huawenyu/homebrew-nginx
+  - cd $(brew --repo)/Library/Taps/huawenyu/homebrew-nginx
+  - export TRAVIS_BUILD_DIR="$(brew --repo)/Library/Taps/huawenyu/homebrew-nginx"
   - ulimit -n 1024
   # Fix linux error: Incorrect file permissions (664)
   - chmod 0644 Formula/*.rb
